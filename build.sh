@@ -1,21 +1,22 @@
 #!/bin/sh
 
-#git pull origin master
+SITEPATH='/home/ofwolves'
 
-#git archive --format=tar --remote=https://github.com/captainofwolves/website.git master | tar -xzf -
+# remove the current code folder
+rm -rf $SITEPATH/code
 
-# script is called from www folder
-#cd ../
+# grab master
+git clone https://github.com/captainofwolves/website.git $SITEPATH/code
 
-#curl https://github.com/captainofwolves/website/tarball/master | tar xz
+# ideally we'd have used git archive export, but github doesn't support it
+# clean the repo
+rm -rf $SITEPATH/code/www/.git*
 
-rm -rf /home/ofwolves/code
+# get rid of anything in there... maybe a bit extreme
+rm -rf $SITEPATH/public_html/*
 
-env GIT_SSL_NO_VERIFY=true git clone https://github.com/captainofwolves/website.git /home/ofwolves/code
+# copy all the www code to live
+cp -r $SITEPATH/code/www/* $SITEPATH/public_html
 
-rm -rf /home/ofwolves/code/www/.git*
-rm -rf /home/ofwolves/public_html/*
-
-cp -r /home/ofwolves/code/www/* /home/ofwolves/public_html
-
-# wget http://shortlist.footystreak.com/images/euro2012/FS_Logo.png
+# replace this script too
+mv $SITEPATH/build.sh $SITEPATH/build.sh.bk && cp $SITEPATH/code/build.sh $SITEPATH/build.sh
