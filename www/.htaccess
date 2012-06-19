@@ -1,0 +1,6 @@
+RewriteEngine On
+
+RewriteCond %{HTTP_HOST} (www\.)?captainofwolves\.(co.uk|com)$ [NC,OR]
+RewriteCond %{HTTP_HOST} (www\.)?captainofwolv.es$ [NC,OR]
+RewriteCond %{HTTP_HOST} (www\.)?ofwolv.es$ [NC]  
+RewriteRule ^(.*)$ http://captain.ofwolv.es/$1 [R=302,L]
