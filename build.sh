@@ -9,7 +9,8 @@
 
 #curl https://github.com/captainofwolves/website/tarball/master | tar xz
 
-rm -rf /home/ofwolves/code
+rm -rf /home/ofwolves/code/*
+rm -rf /home/ofwolves/code/.git
 
 env GIT_SSL_NO_VERIFY=true git clone https://github.com/captainofwolves/website.git /home/ofwolves/code
 
