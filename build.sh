@@ -3,7 +3,8 @@
 SITEPATH='/home/ofwolves'
 
 # remove the current code folder
-rm -rf $SITEPATH/code
+rm -rf $SITEPATH/code/*
+rm -rf $SITEPATH/code/.git
 
 # grab master
 git clone https://github.com/captainofwolves/website.git $SITEPATH/code
