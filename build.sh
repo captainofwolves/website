@@ -19,5 +19,8 @@ rm -rf $SITEPATH/public_html/*
 # copy all the www code to live
 cp -r $SITEPATH/code/www/* $SITEPATH/public_html
 
+# make build script executable
+chmod a+x $SITEPATH/code/build.sh
+
 # replace this script too
 mv $SITEPATH/build.sh $SITEPATH/build.sh.bk && cp $SITEPATH/code/build.sh $SITEPATH/build.sh
