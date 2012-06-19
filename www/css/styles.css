@@ -1,0 +1,49 @@
+/* Captain of Wolves CSS */
+
+/* Reset */
+
+* { margin:0; padding:0; }
+
+/* (all your) Base (are belong to us) */
+
+body {
+	background:#eee;
+}
+
+/* Typography */
+
+
+/* Links */
+
+/* Layout */
+
+	/* Header */
+
+	header {
+		margin-bottom:2em;
+		padding:3em 0;
+		text-align:center;
+	}
+
+	header .logo {
+		color:#bcbcbc;
+		font-size:2.2em;
+		line-height:1em;
+		text-shadow:1px 1px rgba(255,255,255,0.6);
+	}
+
+	/* Social */
+
+	.social .col h2{
+		text-align:center;
+	}
+
+	/* Latest track */
+
+	.latest-track {
+		margin:2em 0;
+	}
+
+	.latest-track h2 {
+		margin-bottom:1em;
+	}
