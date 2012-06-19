@@ -7,7 +7,7 @@ rm -rf $SITEPATH/code/*
 rm -rf $SITEPATH/code/.git
 
 # grab master
-git clone https://github.com/captainofwolves/website.git $SITEPATH/code
+git clone http://github.com/captainofwolves/website.git $SITEPATH/code
 
 # ideally we'd have used git archive export, but github doesn't support it
 # clean the repo
