@@ -38,6 +38,10 @@ body {
 		text-align:center;
 	}
 
+	.social .col {
+		margin-bottom:1.5em;
+	}
+
 	/* Latest track */
 
 	.latest-track {
